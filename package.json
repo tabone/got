@@ -1,0 +1,14 @@
+{
+  "name": "got",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Luca Tabone <taboneluca3@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.0"
+  }
+}

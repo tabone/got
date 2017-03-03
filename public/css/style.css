@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Fondamento;
+  font-size: 10px;
+  background-color: #2e414c;
+  color: #222222;
+}
+
+.app-letter {
+  background-color: #dac4a0;
+  margin: 0 auto;
+  width: 560px;
+  padding: 2em;
+  box-shadow: 0 8px 17px 2px #222222;
+}
+
+.app-letter__question {
+  text-align: center;
+  font-size: 2em;
+}
+
+.app-letter__answer {
+  text-align: center;
+  font-size: 5em;
+}
+
+.app-letter__input {
+  font-family: Fondamento;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 3px #888;
+  border-radius: 5px;
+  outline: none;
+  font-size: 3em;
+  padding: 0.2em 0.4em;
+  color: #222222;
+}
+
+.app-letter__interaction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-letter__signiture {
+  flex: 1;
+}
+
+.app-letter__seal {
+  flex: 1;
+}
+
+.app-letter__seal-button {
+  outline: none;
+}
