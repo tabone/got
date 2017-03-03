@@ -5,6 +5,8 @@ const express = require('express')
 const config = require('../config')
 const utils = require('./utils')
 
+const port = process.env.PORT || config.port
+
 const app = express()
 
 app.get('/api/house/:username', (req, res) => {
@@ -26,6 +28,6 @@ app.get('/api/house/:username', (req, res) => {
 
 app.use(express.static(path.join(__dirname, '../public')))
 
-app.listen(config.port, () => {
-  console.info(`Opening the gates on port ${config.port}`)
+app.listen(port, () => {
+  console.info(`Opening the gates on port ${port}`)
 })
