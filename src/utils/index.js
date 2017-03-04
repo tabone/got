@@ -37,6 +37,9 @@ module.exports = {
       house: Math.floor(Math.random() * (houses.length))
     }
 
+    console.info(`'${username}' was assigned ` +
+      `'${houses[users[username].house]}'`)
+
     // Persist changes.
     return this.save().then(() => users[username])
   },
