@@ -12,7 +12,8 @@
     getHouseName(inputField.value)
   })
 
-  inputField.addEventListener('keydown', function () {
+  inputField.addEventListener('keydown', function (ev) {
+    if (ev.keyCode === 13) return submitButton.click()
     submitButton.src = '/images/wax.png'
   })
 
