@@ -1,10 +1,8 @@
 'use strict'
 
-const fs = require('fs')
 const path = require('path')
-const users = require('./users')
 const houses = require('./houses')
-const usersDB = path.join(__dirname, 'users.json')
+const users = {}
 
 module.exports = {
   /**
@@ -41,20 +39,6 @@ module.exports = {
       `'${houses[users[username].house]}'`)
 
     // Persist changes.
-    return this.save().then(() => users[username])
-  },
-
-  /**
-   * Method used to persist the in memory User Cache to file.
-   * @return {Promise} Resolved when the persistance is successful. Rejected
-   *                   Otherwise.
-   */
-  save () {
-    return new Promise((resolve, reject) => {
-      fs.writeFile(usersDB, JSON.stringify(users), err => {
-        if (err) reject(err)
-        resolve()
-      })
-    })
+    return Promise.resolve(users[username])
   }
 }
